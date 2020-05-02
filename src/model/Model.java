@@ -12,7 +12,7 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.swing.JSpinner;
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 import view.ImagePanel;
 
 /**
@@ -48,7 +48,7 @@ public class Model extends Observable {
     
     public void performFilter(String name) throws InstantiationException, IllegalAccessException {
         Class c = classes.get(name);
-        IPlugin plug = (IPlugin)c.newInstance();
+        IPluginBufferedImage plug = (IPluginBufferedImage)c.newInstance();
         this.sendNotification(plug);
     }
     

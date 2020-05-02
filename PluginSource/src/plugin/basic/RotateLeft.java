@@ -3,7 +3,7 @@ package plugin.basic;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 
 /*
  * To change this template, choose Tools | Templates
@@ -14,7 +14,7 @@ import plugin.IPlugin;
  *
  * @author Tommy
  */
-public class RotateLeft implements IPlugin {
+public class RotateLeft implements IPluginBufferedImage {
     @Override
     public BufferedImage perform(BufferedImage img) 
     {

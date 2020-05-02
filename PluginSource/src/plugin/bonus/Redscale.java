@@ -2,7 +2,7 @@ package plugin.bonus;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 
 /*
  * To change this template, choose Tools | Templates
@@ -13,7 +13,7 @@ import plugin.IPlugin;
  *
  * @author Tommy
  */
-public class Redscale implements IPlugin {
+public class Redscale implements IPluginBufferedImage {
 
     @Override
     public BufferedImage perform(BufferedImage img) {

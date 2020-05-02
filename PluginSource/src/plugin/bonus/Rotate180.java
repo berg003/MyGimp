@@ -3,7 +3,7 @@ package plugin.bonus;
 import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 import java.awt.image.BufferedImage;
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 
 /*
  * To change this template, choose Tools | Templates
@@ -14,7 +14,7 @@ import plugin.IPlugin;
  *
  * @author Tommy
  */
-public class Rotate180 implements IPlugin {
+public class Rotate180 implements IPluginBufferedImage {
     @Override
     public BufferedImage perform(BufferedImage img) 
     {

@@ -33,7 +33,7 @@ import javax.swing.JSpinner;
 import javax.swing.KeyStroke;
 import javax.swing.MenuElement;
 import model.FilterThread;
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 
 /**
  *
@@ -910,11 +910,11 @@ public class MainView extends javax.swing.JFrame implements Observer {
     @Override
     public void update(Observable obs, Object o) {
         JMenuItem mi = null;
-        IPlugin plug = null;
+        IPluginBufferedImage plug = null;
         if (o == control.getClasses()) {
             for (Class c : control.getClasses().values()) {
                 try {
-                    plug = (IPlugin)c.newInstance();
+                    plug = (IPluginBufferedImage)c.newInstance();
                 } catch (InstantiationException ex) {
                     Logger.getLogger(MainView.class.getName()).log(Level.SEVERE, null, ex);
                 } catch (IllegalAccessException ex) {
@@ -927,8 +927,8 @@ public class MainView extends javax.swing.JFrame implements Observer {
                 Mfilters.add(mi);
             }
         }
-        else if (o instanceof IPlugin) {
-            plug = (IPlugin)o;
+        else if (o instanceof IPluginBufferedImage) {
+            plug = (IPluginBufferedImage)o;
             if (TPtabs.getSelectedIndex() != -1) {
                 ImagePanel img = projects.get(TPtabs.getSelectedIndex());
                 Thread fth = new Thread(new FilterThread(img,plug,Bstopfilter,this));

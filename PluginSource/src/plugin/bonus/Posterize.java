@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 
 /*
  * To change this template, choose Tools | Templates
@@ -31,7 +31,7 @@ import plugin.IPlugin;
  *
  * @author Tommy
  */
-public class Posterize implements IPlugin, ActionListener, ChangeListener {
+public class Posterize implements IPluginBufferedImage, ActionListener, ChangeListener {
     private PosterizeView pv;
     private BufferedImage img;
     private BufferedImage res;

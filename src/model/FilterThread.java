@@ -8,7 +8,7 @@ import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import javax.swing.JButton;
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 import view.ImagePanel;
 import view.MainView;
 
@@ -18,11 +18,11 @@ import view.MainView;
  */
 public class FilterThread implements Runnable {
     private ImagePanel img;
-    private IPlugin plug;
+    private IPluginBufferedImage plug;
     private JButton but;
     private MainView mainview;
 
-    public FilterThread(ImagePanel im, IPlugin pl, JButton b, MainView mv) {
+    public FilterThread(ImagePanel im, IPluginBufferedImage pl, JButton b, MainView mv) {
         img = im;
         plug = pl;
         but = b;

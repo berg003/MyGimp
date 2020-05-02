@@ -4,9 +4,9 @@ import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.util.Random;
 
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 
-public class VeryLong implements IPlugin {
+public class VeryLong implements IPluginBufferedImage {
 
 	@Override
 	public BufferedImage perform(BufferedImage img) 

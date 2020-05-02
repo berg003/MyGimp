@@ -11,7 +11,7 @@ import java.util.Enumeration;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
-import plugin.IPlugin;
+import plugin.IPluginBufferedImage;
 
 /**
  *
@@ -36,7 +36,7 @@ public class JarLoader {
             String className = je.getName().substring(0,je.getName().length()-6);
             className = className.replace('/', '.');
             Class c = cl.loadClass(className);
-            IPlugin plug = (IPlugin)c.newInstance();
+            IPluginBufferedImage plug = (IPluginBufferedImage)c.newInstance();
             classes.put(plug.getName(), c);
         }
         jarFile.close();
@@ -58,8 +58,8 @@ public class JarLoader {
             className = className.replace('/', '.');
             Class c = cl.loadClass(className);
             Object o = c.newInstance();
-            if (o instanceof IPlugin) {
-                IPlugin plug = (IPlugin)o;
+            if (o instanceof IPluginBufferedImage) {
+                IPluginBufferedImage plug = (IPluginBufferedImage)o;
                 classes.put(plug.getName(), c);
             }
         }
